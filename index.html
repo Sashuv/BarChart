@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- importing css -->
+    <link rel="stylesheet" href="style.css"> 
+    <title>Barchart</title>
+
+    <script>
+      // this function runs when the page is loaded
+        function setup() {
+        // Adjust the value HERE!
+         country = ["Nepal", "Japan", "China", "India", "Russia"]; 
+         population = [50000000, 30000000, 400000000, 20000000, 100000000];
+        //  BarGraph takes 5 arguments
+        //  1. x-axis
+        //  2. y-axis
+        //  3. width of the screen
+        //  4. height of the screen
+        //  5. id of the canvas
+         var barClass = new BarGraph(country, population,500,500,"screen")
+         barClass.draw();
+        }
+    </script>
+
+</head>
+<body onload="setup()">
+    <div class="title">
+      <h3>Bar Chart</h3>
+      <p>Adjust the values from <strong>index.html</strong>, line <strong>12 </strong>and<strong> 13</strong> </p>
+    </div>
+    <div class "subtitle">
+     
+    </div>
+    <div class="container">
+      <div class="chart">
+        <!-- canvas  -->
+        <canvas id="screen" width="500" height="500"></canvas>
+      </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
